@@ -1,0 +1,9 @@
+[package]
+name = "hookmaster"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0.32", features = ["derive"] }
+git2 = "0.14"
+rayon = "1.6"

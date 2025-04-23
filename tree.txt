@@ -1,0 +1,28 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── LICENSE
+├── src
+│   ├── args.rs
+│   ├── error.rs
+│   ├── git
+│   │   ├── clone.rs
+│   │   ├── mod.rs
+│   │   ├── pull.rs
+│   │   ├── push.rs
+│   │   ├── repository.rs
+│   │   └── status.rs
+│   ├── main.rs
+│   ├── operations
+│   │   ├── executor.rs
+│   │   ├── mod.rs
+│   │   └── progress.rs
+│   ├── types.rs
+│   └── utils
+│       ├── fs.rs
+│       ├── logger.rs
+│       └── mod.rs
+├── target
+└── tree.txt
+
+141 directories, 1341 files
