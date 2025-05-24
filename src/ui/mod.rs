@@ -1,4 +1,4 @@
-//! User interface components for Monolith
+//! User interface components for Monarch
 
 pub mod status_view;
 pub mod command_view;
@@ -38,7 +38,7 @@ pub mod app {
         fn default() -> Self {
             Self {
                 backend: UiBackend::Egui,
-                title: "Monolith: Advanced Git Management Suite".to_string(),
+                title: "Monarch: Advanced Git Management Suite".to_string(),
                 width: 1280,
                 height: 800,
                 dark_mode: true,
@@ -47,7 +47,7 @@ pub mod app {
     }
 
     /// Initialize the UI
-    pub fn initialize(options: UiOptions) -> Result<()> {
+    pub fn initialize(_options: UiOptions) -> Result<()> {
         // Implementation will depend on which UI backend is selected at compile time
         todo!("Implement UI initialization")
     }

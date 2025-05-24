@@ -19,3 +19,46 @@ impl fmt::Display for GitError {
 }
 
 impl std::error::Error for GitError {}
+
+#[derive(Debug)]
+pub enum MonarchError {
+    Git(GitError),
+    Io(std::io::Error),
+    Other(String),
+}
+
+impl fmt::Display for MonarchError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            MonarchError::Git(err) => write!(f, "Git error: {}", err),
+            MonarchError::Io(err) => write!(f, "IO error: {}", err),
+            MonarchError::Other(msg) => write!(f, "Error: {}", msg),
+        }
+    }
+}
+
+impl std::error::Error for MonarchError {}
+
+impl From<GitError> for MonarchError {
+    fn from(err: GitError) -> Self {
+        MonarchError::Git(err)
+    }
+}
+
+impl From<std::io::Error> for MonarchError {
+    fn from(err: std::io::Error) -> Self {
+        MonarchError::Io(err)
+    }
+}
+
+impl From<String> for MonarchError {
+    fn from(err: String) -> Self {
+        MonarchError::Other(err)
+    }
+}
+
+impl From<&str> for MonarchError {
+    fn from(err: &str) -> Self {
+        MonarchError::Other(err.to_string())
+    }
+}

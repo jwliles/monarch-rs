@@ -29,11 +29,11 @@ pub struct RebasePlan {
 }
 
 /// Creates a rebase plan from the given commit tree
-pub fn create_rebase_plan(tree: &CommitTree, base_commit: &str) -> anyhow::Result<RebasePlan> {
+pub fn create_rebase_plan(_tree: &CommitTree, _base_commit: &str) -> anyhow::Result<RebasePlan> {
     todo!("Implement rebase plan creation")
 }
 
 /// Executes a rebase plan on the given repository
-pub fn execute_rebase_plan(repo_path: &str, plan: &RebasePlan) -> anyhow::Result<()> {
+pub fn execute_rebase_plan(_repo_path: &str, _plan: &RebasePlan) -> anyhow::Result<()> {
     todo!("Implement rebase plan execution")
 }

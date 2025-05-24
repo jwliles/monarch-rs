@@ -1,6 +1,6 @@
-//! # Monolith: Advanced Git Management Suite
+//! # Monarch: Advanced Git Management Suite
 //!
-//! Monolith is a powerful platform for managing multiple Git repositories concurrently 
+//! Monarch is a powerful platform for managing multiple Git repositories concurrently 
 //! with a unified interface, intelligent hook management, and advanced visualization.
 //!
 //! ## Features
@@ -27,5 +27,5 @@ pub mod ui;
 pub mod utils;
 
 /// Re-export commonly used types
-pub use error::MonolithError;
+pub use error::MonarchError;
 pub use types::Operation;

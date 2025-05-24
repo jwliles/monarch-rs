@@ -29,11 +29,11 @@ pub struct CommitTree {
 }
 
 /// Creates a commit tree from the given repository
-pub fn create_commit_tree(repo_path: &str) -> anyhow::Result<CommitTree> {
+pub fn create_commit_tree(_repo_path: &str) -> anyhow::Result<CommitTree> {
     todo!("Implement commit tree creation")
 }
 
 /// Renders a commit tree to the terminal or UI
-pub fn render_commit_tree(tree: &CommitTree) -> anyhow::Result<()> {
+pub fn render_commit_tree(_tree: &CommitTree) -> anyhow::Result<()> {
     todo!("Implement commit tree rendering")
 }
