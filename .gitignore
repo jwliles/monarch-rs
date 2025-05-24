@@ -1,8 +1,11 @@
-# Rust build directory and files
+# Rust build artifacts
 /target/
+**/target/
 **/*.rs.bk
-# Cargo.lock
+Cargo.lock
+!hookmaster/Cargo.lock
 
+# IDE and editor files
 # VSCode
 .vscode/
 .vscode-test/
@@ -52,7 +55,6 @@ Session.vim
 .nfs*
 
 # Build and debug
-/target/
 /debug/
 /build/
 *.pdb
@@ -61,10 +63,13 @@ Session.vim
 .env
 .env.local
 .env.*.local
+*.local.toml
+*.local.json
 
 # Generated documentation
 /doc/
 /docs/target/
+/docs/generated/
 
 # Test coverage
 coverage/
@@ -87,3 +92,15 @@ coverage/
 
 # Generated test files
 /tests/generated/
+/tmp/
+/temp/
+/test-repos/
+
+# UI build artifacts
+/ui/dist/
+/ui/node_modules/
+
+# Specific to this project
+monarch.log
+monarch.config
+/hooks/custom/
