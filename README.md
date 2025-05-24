@@ -1,4 +1,4 @@
-# MONOLITH - Advanced Git Management Suite
+# MONARCH - Advanced Git Management Suite
 
 A powerful platform for managing multiple Git repositories concurrently with a unified interface, intelligent hook management, and advanced visualization.
 
@@ -21,17 +21,17 @@ A powerful platform for managing multiple Git repositories concurrently with a u
 ### Build from source
 
 ```bash
-git clone https://github.com/yourusername/monolith.git
-cd monolith
+git clone https://github.com/yourusername/monarch-rs.git
+cd monarch-rs
 cargo build --release
 ```
 
-The compiled binary will be available at `target/release/monolith`.
+The compiled binary will be available at `target/release/monarch`.
 
 ## Usage
 
 ```bash
-monolith [OPTIONS] <OPERATION> <SOURCE_DIR> [TARGET_DIR]
+monarch [OPTIONS] <OPERATION> <SOURCE_DIR> [TARGET_DIR]
 ```
 
 ### Operations
@@ -54,25 +54,25 @@ monolith [OPTIONS] <OPERATION> <SOURCE_DIR> [TARGET_DIR]
 Clone all repositories from one directory to another:
 
 ```bash
-monolith clone ~/projects ~/backup
+monarch clone ~/projects ~/backup
 ```
 
 With verbose output:
 
 ```bash
-monolith --verbose clone ~/projects ~/backup
+monarch --verbose clone ~/projects ~/backup
 ```
 
 List all repositories and their status:
 
 ```bash
-monolith status ~/projects
+monarch status ~/projects
 ```
 
 Run a git command on all repositories:
 
 ```bash
-monolith run ~/projects -- branch -a
+monarch run ~/projects -- branch -a
 ```
 
 ### Hook Management
@@ -80,25 +80,25 @@ monolith run ~/projects -- branch -a
 List hooks for all repositories:
 
 ```bash
-monolith hook list ~/projects
+monarch hook list ~/projects
 ```
 
 Create a new hook across all repositories:
 
 ```bash
-monolith hook create ~/projects --hook-type pre-commit --script-path ~/myhooks/pre-commit.sh
+monarch hook create ~/projects --hook-type pre-commit --script-path ~/myhooks/pre-commit.sh
 ```
 
 Install a sample hook across all repositories:
 
 ```bash
-monolith hook install ~/projects --hook-type pre-commit
+monarch hook install ~/projects --hook-type pre-commit
 ```
 
 Remove a hook from all repositories:
 
 ```bash
-monolith hook remove ~/projects --hook-type pre-commit
+monarch hook remove ~/projects --hook-type pre-commit
 ```
 
 ## Development
@@ -118,6 +118,15 @@ monolith hook remove ~/projects --hook-type pre-commit
 ```bash
 cargo test
 ```
+
+## Requirements
+
+- Rust (Minimum supported version: 1.75.0)
+- GNU/Linux or other free operating system
+- Git command-line tool
+- Standard system libraries
+
+**Note**: Monarch is developed exclusively for free operating systems. It is not officially tested or supported on proprietary platforms.
 
 ## License
 
