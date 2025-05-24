@@ -6,7 +6,7 @@ description = "Advanced Git Management Suite for handling multiple repositories 
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/yourusername/monarch-rs"
+repository = "https://github.com/jwliles/monarch-rs"
 keywords = ["git", "repository", "management", "hooks", "concurrent"]
 categories = ["development-tools", "command-line-utilities"]
 

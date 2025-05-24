@@ -21,7 +21,7 @@ A powerful platform for managing multiple Git repositories concurrently with a u
 ### Build from source
 
 ```bash
-git clone https://github.com/yourusername/monarch-rs.git
+git clone https://github.com/jwliles/monarch-rs.git
 cd monarch-rs
 cargo build --release
 ```
