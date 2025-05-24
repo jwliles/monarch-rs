@@ -1,9 +1,16 @@
 // src/main.rs
 mod args;
+mod config;
+mod conflict;
+mod diff;
+mod editor;
 mod error;
 mod git;
+mod hooks;
 mod operations;
+mod rebase;
 mod types;
+mod ui;
 mod utils;
 
 use anyhow::Result;
@@ -46,7 +53,7 @@ async fn main() -> Result<()> {
 
 fn print_header() {
     use colored::*;
-    println!("{}", "MONOLITH".bright_green().bold());
+    println!("{}", "MONARCH".bright_green().bold());
     println!("{}", "Advanced Git Management Suite".bright_cyan());
     println!("Version: {}\n", VERSION);
 }
